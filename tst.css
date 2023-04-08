@@ -269,8 +269,11 @@ body {
         margin-bottom: 0;
     }
 
-    .paint-container {
-        margin-left: 0;
-        margin-right: 0;
+    /*Add some margin to the container sides*/
+    .win95-container,
+    .paint-container,
+    .paint-container:nth-of-type(2n) {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
