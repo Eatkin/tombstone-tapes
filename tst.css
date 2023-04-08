@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #007c78;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: url("img/cursor.png"), auto;
+}
+
+.page-break {
+    margin: 25vh 0;
+    max-width: 100vw;
+}
+
+.gif-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 80px;
+    /*^ This has to be the size of the footer + some extra*/
+}
+
+.win95-container {
+    border-image: url("img/win98_9slice.png");
+    border-image-slice: 33% fill;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    border-style: solid;
+    border-width: 44px;
+}
+
+.win95-container h1,
+.win95-container h2 {
+    font-family: Consolas, "Courier New", monospace;
+    color: #fdfdfe;
+    top: -56px;
+    left: -30px;
+    /*A weirdly specific value for some reason idk*/
+    position: relative;
+}
+
+.win95-container h1 img,
+.win95-container h2 img {
+    max-width: 24px;
+    margin-right: -4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.win95-container-wrapper {
+    margin-bottom: -75px;
+    display: flex;
+    align-items: top;
+    top: -44px;
+    position: relative;
+    flex-direction: row;
+}
+
+.win95-container-wrapper img {
+    align-self: center;
+    margin-right: 20px;
+}
+
+.win95-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.win95-btn {
+    position: relative;
+    top: 20px;
+    margin: 0 20px;
+    border: none;
+    color: black;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: large;
+    padding: 8px 16px;
+    background-color: #bdbdbd;
+    background-image: url("img/win95Button.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-width: 120px;
+    white-space: nowrap;
+}
+
+.win95-btn:hover {
+    cursor: url("img/cursorMouseOver.png"), auto;
+}
+
+.win95-btn:active {
+    background-image: url("img/win95ButtonPressed.png");
+}
+
+.button-wrapper {
+    display: flex;
+}
+
+.button-wrapper img {
+    align-self: center;
+}
+
+.paint-container {
+    position: relative;
+    max-width: 800px;
+    margin-top: 50px;
+    display: flex;
+    margin-left: calc((100vw - min(800px, 100vw)) * 0.2);
+}
+
+.paint-container:nth-of-type(2n) {
+    margin-left: auto;
+    margin-right: calc((100vw - min(800px, 100vw)) * 0.2);
+}
+
+.paint-container .ms-paint-background {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+/*Image ratio w:h 552:311 i.e. 1.7749, this is very close to standard HD resolution*/
+.paint-container .ms-paint-product-image {
+    left: 10.17%;
+    top: 10.2%;
+    width: 86.38%;
+    height: 68.96%;
+    position: absolute;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b8bcb8;
+    border-top: 3px solid #f8fcf8;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #d8dcd8;
+}
+
+#start-menu {
+    position: absolute;
+    left: 4px;
+    top: 5%;
+    height: 90%;
+    cursor: auto;
+}
+
+#start-menu:hover {
+    cursor: pointer;
+}
+
+#start-menu-box {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    width: 354px;
+    height: 518px;
+    background-image: url("img/startMenu.png");
+    display: none;
+    padding: 7px 3px 0 52px;
+    z-index: 1;
+}
+
+.start-menu-item {
+    background-color: #c3c3c3;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    cursor: auto;
+}
+
+.start-menu-item.etsy {
+    background-image: url("img/etsy_menu_item.png");
+}
+
+.start-menu-item.instagram {
+    background-image: url("img/insta_menu_item.png");
+}
+
+.start-menu-item.mail {
+    background-image: url("img/mail_menu_item.png");
+}
+
+.start-menu-item.find {
+    background-image: url("img/find_menu_item.png");
+}
+
+.start-menu-item.help {
+    background-image: url("img/help_menu_item.png");
+}
+
+.start-menu-item.run {
+    background-image: url("img/run_menu_item.png");
+}
+
+.start-menu-item.shutdown {
+    margin-top: 4px;
+    height: 81px;
+    background-image: url("img/shutdown_menu_item.png");
+}
+
+.start-menu-item:hover {
+    background-color: #010281;
+    cursor: pointer;
+}
+
+#clock {
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    height: 80%;
+    width: 96px;
+    white-space: nowrap;
+    background-image: url("img/clockContainer.png");
+    background-size: 100% 100%;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#time {
+    color: black;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.copyright {
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 0.3em;
+}
+
+#shutdown {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: transparent;
+    transition: background-color 2s;
+    display: none;
+}
+
+/*Mobile responsive stuff*/
+@media screen and (max-width: 800px) {
+    .win95-container-wrapper {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .paint-container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

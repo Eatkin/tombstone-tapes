@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tombstone Tapes</title>
+    <link rel="stylesheet" type="text/css" href="tst.css">
+</head>
+
+<body>
+    <main>
+        <section class="about" id="about">
+            <div class="win95-container">
+                <h1>
+                    <img src="img/tombstone.jpg" alt="Tombstone Tapes logo" />
+                    Tombstone Tapes
+                </h1>
+                <div class="win95-container-wrapper">
+                    <img src="img/Tape-01.gif" alt="A gif of a spinning cassette tape" .>
+                    <div>
+                        <p>Sometimes things become obselete, replaced by more modern alternatives. Cassette tapes were
+                            replaced by CDs. CDs were replaced by digital downloads. Digital downloads were replaced by
+                            streaming.</p>
+                        <p>But just because something is obselete, doesn't mean it's not cool.</p>
+                        <p>Cassette tapes play music for you using a magnetic strip. That's incredible.</p>
+                        <p>Tombstone Tapes creates bespoke cassette tapes to remind you of that nostalgic past you had,
+                            all by hand.
+                            We've got The Sounds of Windows 98, Sega Megadrive soundtracks, and loads more come into
+                            stock.
+                        </p>
+                        <p>Enjoy your tapes, give them as a gift, display them on your desk. Just don't forget to rewind
+                            them once you're done listening.</p>
+                    </div>
+                </div>
+                <div class="win95-buttons">
+                    <label for="cassettes-button"></label>
+                    <a href="#cassettes"><button id="cassettes-button" class="win95-btn">Cassettes</button></a>
+                    <label for="visit-shop-button"></label>
+                    <a href="https://www.etsy.com/uk/shop/TombstoneTapes" target="_blank"><button
+                            class="win95-btn">Visit Shop</button></a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="page-break" />
+
+        <section id="cassettes">
+            <div class="win95-container">
+                <h2>
+                    <img src="img/tombstone.jpg" alt="Tombstone Tapes logo" />
+                    Cassette tapes
+                </h2>
+                <div class="win95-container-wrapper">
+                    <div>
+                        <p>Check out our latest offering of nostalgic, hand made tapes below!</p>
+                        <p>&quot;The Sounds of Windows 98&quot; - relive the days of Windows operating systems, and
+                            listen to the 3D Pinball Space Cadet soundtrack whilst you're at it.</p>
+                        <p>&quot;Alien 3 Soundtrack&quot; - for fans of retro gaming, then this Sega Master System
+                            soundtrack is perfect to take you back to the past.</p>
+                    </div>
+                    <div class="win95-buttons">
+                        <label for="visit-shop-button"></label>
+                        <a href="https://www.etsy.com/uk/shop/TombstoneTapes" target="_blank"><button class="win95-btn">
+                                <div class="button-wrapper">
+                                    <img src="img/cassette.gif" alt="A gif of a cassette tape" />
+                                    <p>Visit Shop</p>
+                                </div>
+                            </button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paint-container">
+                <img class="ms-paint-background" src="img/MSPaint.png" alt="Windows 95 style Microsoft Paint" \>
+                <img class="ms-paint-product-image" src="img/alien3.jpg"
+                    alt="&quot;Alien 3&quot; Sega Master System soundtrack Casette Tape" \>
+            </div>
+            <div class="paint-container">
+                <img class="ms-paint-background" src="img/MSPaint.png" alt="Windows 95 style Microsoft Paint" \>
+                <img class="ms-paint-product-image" src="img/win98.jpg"
+                    alt="&quot;The Sounds of Windows 98&quot; Casette Tape" \>
+            </div>
+        </section>
+    </main>
+
+    <hr class="page-break" />
+
+    <aside>
+        <div class="gif-container">
+            <div style="text-align: center;">
+                <img src="img/Tape-01.gif" alt="3D rotating video tape" \>
+            </div>
+        </div>
+    </aside>
+
+    <div id="start-menu-box">
+        <a href="https://www.etsy.com/uk/shop/TombstoneTapes" target="_blank">
+            <div class="start-menu-item etsy">
+            </div>
+        </a>
+        <a href="https://www.instagram.com/tombstonetapes/" target="_blank">
+            <div class="start-menu-item instagram">
+            </div>
+        </a>
+        <a href="mailto: tombstonetapes@gmail.com" target="_blank">
+            <div class="start-menu-item mail">
+            </div>
+        </a>
+        <div class="start-menu-item find" id="find-button">
+        </div>
+        <a href="#about" target="_self">
+            <div class="start-menu-item help">
+            </div>
+        </a>
+        <a href="https://luisbraganca.github.io/fake-terminal-website/" target="_blank">
+            <div class="start-menu-item run">
+            </div>
+        </a>
+        <div class="start-menu-item shutdown" id="shutdown-button">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img id="start-menu" src="img/startButton.png" alt="Windows 95 Start Button" \>
+        <div id="clock">
+            <p id="time">14:20</p>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2023</p>
+            <p>Tombstone Tapes</p>
+        </div>
+    </footer>
+
+    <div id="shutdown">
+    </div>
+
+    <!--- Start menu script --->
+    <script>
+        var startButton = document.getElementById("start-menu");
+        var startMenuBox = document.getElementById("start-menu-box");
+        var findButton = document.getElementById("find-button");
+        var shutdownButton = document.getElementById("shutdown-button");
+        var shutdownDiv = document.getElementById("shutdown");
+
+        //Open and close the start menu
+        startButton.addEventListener("click", function () {
+            if (startMenuBox.style.display == "block") {
+                startMenuBox.style.display = "none";
+                startButton.src = "img/startButton.png";
+            }
+            else {
+                startMenuBox.style.display = "block";
+                startButton.src = "img/startButtonClicked.png";
+            }
+        });
+
+        document.addEventListener("click", function (event) {
+            if (event.target != startButton && event.target.parentNode != startMenuBox) {
+                startMenuBox.style.display = "none";
+                startButton.src = "img/startButton.png";
+            }
+        });
+
+        //Find button
+        findButton.addEventListener("click", function () {
+            if (window.find) {
+                window.find("Tombstone Tapes");
+                startMenuBox.style.display = "none";
+                startButton.src = "img/startButton.png";
+            }
+            else {
+                // Fallback for older browsers
+                alert("Your browser does not support the find() method");
+            }
+        });
+
+        //Shutdown button
+        shutdownButton.addEventListener("click", function () {
+            if (confirm("Are you sure you want to shutdown?")) {
+                shutdownDiv.style.display = "block";
+                setTimeout(function () {
+                    shutdownDiv.style.backgroundColor = "black";
+                }, 10); // set a delay of 10 milliseconds before changing background color
+
+                startMenuBox.style.display = "none";
+                startButton.src = "img/startButton.png";
+            }
+        });
+    </script>
+
+    <!--- Clock script --->
+    <script>
+        const timeElement = document.getElementById("time");
+
+        function updateTime() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var nextMinute = new Date(date.getFullYear(), date.getMonth(), date.getDate(), hours, minutes + 1, 0, 0);
+            var timeDiff = nextMinute - date;
+
+            var amPm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12 || 12;
+
+            document.getElementById("time").innerHTML = `${hours}:${minutes.toString().padStart(2, "0")} ${amPm}`;
+            setInterval(updateTime, timeDiff);
+        }
+
+        updateTime();
+    </script>
+</body>
+
+</html>
