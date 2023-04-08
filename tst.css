@@ -129,9 +129,9 @@ body {
 /*Image ratio w:h 552:311 i.e. 1.7749, this is very close to standard HD resolution*/
 .paint-container .ms-paint-product-image {
     left: 10.17%;
-    top: 10.2%;
+    top: 8.2%;
     width: 86.38%;
-    height: 68.96%;
+    height: auto;
     position: absolute;
 }
 
