@@ -11,6 +11,11 @@ body {
     cursor: url("img/cursor.png"), auto;
 }
 
+a {
+    text-decoration: none;
+    color: #007c78;
+}
+
 .page-break {
     margin: 25vh 0;
     max-width: 100vw;
