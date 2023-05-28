@@ -218,7 +218,7 @@
             hours = hours % 12 || 12;
 
             document.getElementById("time").innerHTML = `${hours}:${minutes.toString().padStart(2, "0")} ${amPm}`;
-            setInterval(updateTime, timeDiff);
+            setTimeout(updateTime, timeDiff);
         }
 
         updateTime();
