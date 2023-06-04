@@ -91,9 +91,10 @@ a {
     background-image: url("img/win95Button.png");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
+    background-size: 100% 100%;
     min-width: 120px;
     white-space: nowrap;
+    text-align: center;
 }
 
 .win95-btn:hover {
